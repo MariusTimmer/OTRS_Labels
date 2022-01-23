@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_config version="1.0" init="Application">
+    <ConfigItem Name="DynamicFields::Driver###Label" Required="0" Valid="1">
+        <Description Translatable="1">Ticket labels</Description>
+        <Group>DynamicFieldLabel</Group>
+        <SubGroup>DynamicFields::Backend::Registration</SubGroup>
+        <Settings>
+        	<Hash>
+	        	<Item Key="DisplayName" Translatable="1">Label</Item>
+	        	<Item Key="Module">Kernel::System::DynamicField::Driver::Label</Item>
+	        	<Item Key="ConfigDialog">AgentDynamicFieldLabel</Item>
+        	</Hash>
+        </Settings>
+    </ConfigItem>
+    <ConfigItem Name="Frontend::Module###AgentDynamicFieldLabel" Required="0" Valid="1">
+        <Description Translatable="1">Frontend module registration for the agent interface.</Description>
+        <Group>DynamicFieldLabel</Group>
+        <SubGroup>Frontend::Admin::ModuleRegistration</SubGroup>
+        <Setting>
+            <FrontendModuleReg>
+                <Group>admin</Group>
+                <Description>Admin</Description>
+                <Title Translatable="1">Dynamic Fields Text Backend GUI</Title>
+                <Loader>
+                    <JavaScript>Core.Agent.Admin.DynamicField.js</JavaScript>
+                </Loader>
+            </FrontendModuleReg>
+        </Setting>
+    </ConfigItem>
+</otrs_config>

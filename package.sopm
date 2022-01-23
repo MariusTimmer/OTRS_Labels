@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.0">
+    <Name>OTRS-Labels</Name>
+    <Version>0.0.1</Version>
+    <Framework>6.0.x</Framework>
+    <Vendor>Marius Timmer</Vendor>
+    <URL>https://mariustimmer.de/</URL>
+    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007</License>
+    <ChangeLog Version="0.0.2" Date="2022-01-21">Initial prerelease version</ChangeLog>
+    <Description Lang="en">Adds labels to your tickets.</Description>
+    <Description Lang="de">Fügt Ihren Tickets Schlagworte hinzu.</Description>
+    <IntroInstall Type="post" Lang="en" Title="Notification">Please do not forget to set up the plugin in the system config.</IntroInstall>
+    <IntroInstall Type="post" Lang="de" Title="Hinweis">Bitte vergessen Sie nicht, das Plugin in der Systemkonfiguration einzurichten.</IntroInstall>
+    <Filelist>
+        <File Permission="644" Location="Kernel/Config/Files/DynamicFieldLabel.xml"></File>
+        <File Permission="644" Location="Kernel/Modules/AgentDynamicFieldLabel.pm"></File>
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentDynamicFieldLabel.tt"></File>
+        <File Permission="644" Location="Kernel/System/DynamicField/Driver/Label.pm"></File>
+    </Filelist>
+</otrs_package>
